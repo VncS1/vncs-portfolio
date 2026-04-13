@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🟣 Vinicius Machioni | Full-Stack Architect
 
-## Getting Started
+![Portfolio Screenshot](/public/screenshot.png)
 
-First, run the development server:
+> **"Criando ecossistemas digitais de alta performance onde a estrutura brutalista encontra a precisão high-tech."**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este é o meu portfólio profissional, desenvolvido para demonstrar minhas competências em engenharia de software, arquitetura de sistemas e design de interfaces modernas. O projeto foi construído do zero, focando em performance extrema, SEO e uma experiência de usuário (UX) imersiva.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Tecnologias Core
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O projeto utiliza o que há de mais moderno no ecossistema Web:
 
-## Learn More
+- **Next.js 16 (App Router):** Utilizando Server Components para carregamento instantâneo e otimização de LCP.
+- **Tailwind CSS 4.0:** Aproveitando o novo motor de engine CSS focado em variáveis nativas e performance em tempo de compilação.
+- **TypeScript:** Tipagem estrita para garantir a escalabilidade e segurança do código.
+- **CSS Animations:** Animações fluidas e efeitos de digitação (Typewriter) otimizados para não impactar o CLS.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ O Arsenal Técnico
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O portfólio está dividido em seções estratégicas:
 
-## Deploy on Vercel
+1. **Hero Section:** Apresentação de alto impacto com animação de digitação em CSS puro.
+2. **Technical Arsenal:** Exibição dinâmica das stacks de Front-end, Back-end e Systems através de mapeamento de dados (D.R.Y).
+3. **Featured Creations:** Vitrine de projetos com lógica de renderização condicional para repositórios privados.
+4. **CTA & Contact:** Canal direto via WhatsApp integrado para conversão imediata de leads.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📐 Design System
+
+A identidade visual foi construída sobre uma paleta **Dark Cyberpunk**, focada em contraste e legibilidade:
+
+- **Background:** `#09090B` (Neutral Dark)
+- **Primary:** `#8B5CF6` (Vibrant Violet)
+- **Secondary:** `#6D28D9` (Deep Purple)
+- **Typography:** `Space Grotesk` para headlines (Geometria e precisão) e `Inter` para o corpo (Clareza e legibilidade).
+
+---
+
+## 🏁 Como Rodar o Projeto
+
+1. **Instale as dependências:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Configure as variáveis de ambiente:**
+   Crie um arquivo `.env.local` e adicione o domínio base:
+
+   ```env
+   NEXT_PUBLIC_SITE_URL=http://localhost:3000
+   ```
+
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📬 Contato
+
+- **LinkedIn:** [linkedin.com/in/seu-usuario](https://linkedin.com/in/seu-usuario)
+- **E-mail:** [seu.email.profissional@gmail.com](mailto:seu.email.profissional@gmail.com)
+- **WhatsApp:** [Conversar Agora](https://wa.me/5535999999999)
+
+---
+
+Developed with precision by **Vinicius Machioni**.
