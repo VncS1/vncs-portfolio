@@ -14,41 +14,51 @@ const inter = Inter({
   display: "swap",
 });
 
-
-
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ),
 
   title: "Vinicius Machioni | Desenvolvedor Full-Stack",
-  description: "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis e interfaces de alta performance utilizando React, Node.js e Laravel.",
-  keywords: ["Desenvolvedor Full Stack", "Engenheiro de Software", "React", "Next.js", "Laravel", "Node.js", "TypeScript", "Vinicius Machioni"],
+  description:
+    "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis e interfaces de alta performance utilizando React, Next.js, Node.js e Laravel.",
+  keywords: [
+    "Desenvolvedor Full Stack",
+    "Engenheiro de Software",
+    "React",
+    "Next.js",
+    "Laravel",
+    "Node.js",
+    "TypeScript",
+    "Vinicius Machioni",
+  ],
   authors: [{ name: "Vinicius Machioni" }],
   creator: "Vinicius Machioni",
-  
+
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://seusite.com.br", 
-    title: "Vinicius Machioni | Full-Stack Architect",
-    description: "Crafting high-performance digital ecosystems where brutalist structure meets high-tech precision.",
+    url: "https://machioni.dev.br",
+    title: "Vinicius Machioni | Desenvolvedor Full-Stack",
+    description:
+      "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis e interfaces de alta performance utilizando React, Next.js, Node.js e Laravel.",
     siteName: "Vinicius Machioni Portfolio",
 
     images: [
       {
-        url: "/og-image.png", 
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Vinicius Machioni - Portfolio",
       },
     ],
   },
-  
+
   twitter: {
     card: "summary_large_image",
     title: "Vinicius Machioni | Full-Stack Architect",
-    description: "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis.",
+    description:
+      "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis.",
     images: ["/og-image.png"],
   },
 };
@@ -59,7 +69,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
     <html
       lang="pt-BR"
       className={`${spaceGrotesk.variable} ${inter.variable} scroll-smooth antialiased`}
