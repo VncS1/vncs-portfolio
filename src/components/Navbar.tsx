@@ -20,9 +20,8 @@ export function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-body font-medium text-text-muted">
-          <Link href="#" className="text-text-main relative group">
+          <Link href="#" className="hover:text-primary transition-colors hover:drop-shadow-[0_0_8px_var(--color-primary)]">
             Sobre
-            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary shadow-[0_0_12px_2px_var(--color-primary)] rounded-full"></span>
           </Link>
 
           <Link
