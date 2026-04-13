@@ -7,12 +7,12 @@ export function Projects() {
       title: "Slotly",
       description:
         "Plataforma completa de agendamento com gestão de horários e painel administrativo.",
-      tags: ["REACT", "LARAVEL", "FULL-STACK"],
+      tags: ["REACT", "LARAVEL", "TAILWIND", "FULL-STACK"],
       image: "/projetos/slotly.png",
       isOnWeb: "",
       liveUrl: "#",
       isPrivate: false,
-      codeUrl: "#",
+      codeUrl: "https://github.com/VncS1/slotly",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export function Projects() {
       description:
         "CRM customizado para agência de viagens com gestão de leads, status e métricas.",
       tags: ["NEXT.JS", "TAILWIND 4", "PRISMA"],
-      image: "/projetos/viaja-chris.png",
+      image: "/projetos/viaja-chris.jpeg",
       isOnWeb: "",
       liveUrl: "#",
       isPrivate: true,
@@ -28,39 +28,39 @@ export function Projects() {
     },
     {
       id: 3,
-      title: "Accessible Web",
-      description:
-        "Extensão para Google Chrome focada em avaliar e garantir a acessibilidade de websites.",
-      tags: ["CHROME EXT", "AXE-CORE", "JAVASCRIPT"],
-      image: "/projetos/accessible-web.png",
-      isOnWeb: "",
-      liveUrl: "#",
-      isPrivate: false,
-      codeUrl: "#",
-    },
-    {
-      id: 4,
-      title: "Telemedicina SaaS",
-      description:
-        "Arquitetura e desenvolvimento de plataforma de saúde para consultas remotas.",
-      tags: ["SAAS", "SOFTWARE ARCHITECTURE"],
-      image: "/projetos/telemedicina.png",
-      isOnWeb: "",
-      liveUrl: "#",
-      isPrivate: true,
-      codeUrl: "#",
-    },
-    {
-      id: 5,
       title: "PUC Minas Poços",
       description:
         "Desenvolvimento do novo website institucional da universidade com foco em performance.",
       tags: ["FRONT-END", "UI/UX", "WEB"],
       image: "/projetos/puc.png",
-      isOnWeb: "",
-      liveUrl: "#",
+      isOnWeb: true,
+      liveUrl: "www.pucpcaldas.br",
       isPrivate: true,
       codeUrl: "#",
+    },
+    {
+      id: 4,
+      title: "Accessible Web",
+      description:
+        "Extensão para Google Chrome focada em avaliar e garantir a acessibilidade de websites.",
+      tags: ["REACT", "CHROME EXT", "AXE-CORE", "JAVASCRIPT"],
+      image: "/projetos/accessible-web.png",
+      isOnWeb: "",
+      liveUrl: "#",
+      isPrivate: false,
+      codeUrl: "https://github.com/VncS1/accessible-web",
+    },
+    {
+      id: 5,
+      title: "Formulário com Testes Automatizados",
+      description:
+        "Desenvolvimento de um formulário para estudos em testes automatizados com Vitest e React Testing Library",
+      tags: ["REACT", "VITEST", "REACT TESTING LIBRARY"],
+      image: "/projetos/vitest.png",
+      isOnWeb: false,
+      liveUrl: "",
+      isPrivate: false,
+      codeUrl: "https://github.com/VncS1/vitest-form",
     },
   ];
 
