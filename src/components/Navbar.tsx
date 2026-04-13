@@ -51,7 +51,7 @@ export function Navbar() {
           rel="noopener noreferrer"
           className="bg-primary text-text-main px-6 py-2.5 rounded-md text-sm font-body font-medium hover:bg-secondary transition-colors shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_25px_var(--color-primary)]"
         >
-          Resume
+          Currículo
         </a>
       </div>
     </nav>
