@@ -7,7 +7,7 @@ export function Contact() {
     <section id="contact" className="py-24 px-6 md:px-8 relative bg-surface">
       <div className="max-w-4xl mx-auto bg-background p-12 rounded-2xl text-center border border-white/5 shadow-2xl shadow-black/50">
         <h2 className="text-4xl md:text-5xl font-headline font-bold mb-6 tracking-tighter text-text-main">
-          Pronto para construir <br className="hidden md:block" />
+          Pronto para construir <br />
           O Futuro?
         </h2>
 
