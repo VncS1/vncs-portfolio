@@ -65,9 +65,9 @@ A identidade visual foi construída sobre uma paleta **Dark Cyberpunk**, focada 
 
 ## 📬 Contato
 
-- **LinkedIn:** [linkedin.com/in/seu-usuario](https://linkedin.com/in/seu-usuario)
-- **E-mail:** [seu.email.profissional@gmail.com](mailto:seu.email.profissional@gmail.com)
-- **WhatsApp:** [Conversar Agora](https://wa.me/5535999999999)
+- **LinkedIn:** [linkedin.com/in/seu-usuario](https://linkedin.com/in/viniciusmachioni)
+- **E-mail:** [seu.email.profissional@gmail.com](mailto:machioni.dev@gmail.com)
+- **WhatsApp:** [Conversar Agora](https://wa.me/5535998104311)
 
 ---
 
