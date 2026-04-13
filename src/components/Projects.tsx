@@ -70,7 +70,7 @@ export function Projects() {
         <div className="flex justify-between items-end mb-16">
           <div>
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-2 text-text-main">
-              Featured Creations
+              Projetos
             </h2>
             <div className="h-1 w-20 bg-primary rounded-full"></div>
           </div>
