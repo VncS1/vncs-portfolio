@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://machioni.dev.br/sitemap.xml
