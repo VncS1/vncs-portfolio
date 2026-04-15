@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-8 pt-32 pb-32 lg:pt-20 lg:pb-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-8 pt-32 pb-32 md:px-28 lg:pt-20 lg:pb-0">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.08),transparent_70%)] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">

@@ -66,7 +66,7 @@ export function Projects() {
 
   return (
     <section id="work" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-20">
         <div className="flex justify-between items-end mb-16">
           <div>
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-2 text-text-main">

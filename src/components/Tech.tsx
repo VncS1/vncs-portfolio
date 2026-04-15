@@ -60,7 +60,7 @@ export function Tech() {
   ];
 
   return (
-    <section id="tech" className="py-24 md:px-32 bg-surface">
+    <section id="tech" className="py-24 md:px-20 bg-surface">
       <div className="w-full mx-auto px-6 md:px-8">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-2 text-text-main">
