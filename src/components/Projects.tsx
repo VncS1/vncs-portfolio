@@ -4,6 +4,18 @@ export function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Ally-AI",
+      description:
+        "Uma plataforma SaaS de auditoria que utiliza inteligência artificial para converter violações de acessibilidade em sugestões de código práticas e acionáveis em tempo real.",
+      tags: ["Next.js", "Node.js", "Tailwind", "FULL-STACK"],
+      image: "/projetos/ally-ai.png",
+      isOnWeb: true,
+      liveUrl: "https://ally-ai-web.vercel.app",
+      isPrivate: true,
+      codeUrl: "",
+    },
+    {
+      id: 2,
       title: "Slotly",
       description:
         "Plataforma completa de agendamento com gestão de horários e painel administrativo.",
@@ -15,19 +27,19 @@ export function Projects() {
       codeUrl: "https://github.com/VncS1/slotly",
     },
     {
-      id: 2,
+      id: 3,
       title: "Viaja + Chris Dashboard",
       description:
         "CRM customizado para agência de viagens com gestão de leads, status e métricas.",
       tags: ["NEXT.JS", "TAILWIND 4", "PRISMA"],
       image: "/projetos/viaja-chris.jpeg",
-      isOnWeb: "",
-      liveUrl: "#",
+      isOnWeb: true,
+      liveUrl: "https://viajamaiscomchris.com.br",
       isPrivate: true,
       codeUrl: "#",
     },
     {
-      id: 3,
+      id: 4,
       title: "PUC Minas Poços",
       description:
         "Desenvolvimento do novo website institucional da universidade com foco em performance.",
@@ -39,7 +51,7 @@ export function Projects() {
       codeUrl: "#",
     },
     {
-      id: 4,
+      id: 5,
       title: "Accessible Web",
       description:
         "Extensão para Google Chrome focada em avaliar e garantir a acessibilidade de websites.",
@@ -51,7 +63,7 @@ export function Projects() {
       codeUrl: "https://github.com/VncS1/accessible-web",
     },
     {
-      id: 5,
+      id: 6,
       title: "Formulário com Testes Automatizados",
       description:
         "Desenvolvimento de um formulário para estudos em testes automatizados com Vitest e React Testing Library",
@@ -75,7 +87,7 @@ export function Projects() {
             <div className="h-1 w-20 bg-primary rounded-full"></div>
           </div>
         </div>
-    
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
