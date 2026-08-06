@@ -1,123 +1,47 @@
 import Image from "next/image";
+import { projects } from "@/data/projects";
 
 export function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "Ally-AI",
-      description:
-        "Uma plataforma SaaS de auditoria que utiliza inteligência artificial para converter violações de acessibilidade em sugestões de código práticas e acionáveis em tempo real.",
-      tags: ["Next.js", "Node.js", "Tailwind", "FULL-STACK"],
-      image: "/projetos/ally-ai.png",
-      isOnWeb: true,
-      liveUrl: "https://ally-ai-web.vercel.app",
-      isPrivate: true,
-      codeUrl: "",
-    },
-    {
-      id: 2,
-      title: "Slotly",
-      description:
-        "Plataforma completa de agendamento com gestão de horários e painel administrativo.",
-      tags: ["REACT", "LARAVEL", "TAILWIND", "FULL-STACK"],
-      image: "/projetos/slotly.png",
-      isOnWeb: "",
-      liveUrl: "#",
-      isPrivate: false,
-      codeUrl: "https://github.com/VncS1/slotly",
-    },
-    {
-      id: 3,
-      title: "Viaja + Chris Dashboard",
-      description:
-        "CRM customizado para agência de viagens com gestão de leads, status e métricas.",
-      tags: ["NEXT.JS", "TAILWIND 4", "PRISMA"],
-      image: "/projetos/viaja-chris.jpeg",
-      isOnWeb: true,
-      liveUrl: "https://viajamaiscomchris.com.br",
-      isPrivate: true,
-      codeUrl: "#",
-    },
-    {
-      id: 4,
-      title: "PUC Minas Poços",
-      description:
-        "Desenvolvimento do novo website institucional da universidade com foco em performance.",
-      tags: ["FRONT-END", "UI/UX", "WEB"],
-      image: "/projetos/puc.png",
-      isOnWeb: true,
-      liveUrl: "https://www.pucpcaldas.br",
-      isPrivate: true,
-      codeUrl: "#",
-    },
-    {
-      id: 5,
-      title: "Accessible Web",
-      description:
-        "Extensão para Google Chrome focada em avaliar e garantir a acessibilidade de websites.",
-      tags: ["REACT", "CHROME EXT", "AXE-CORE", "JAVASCRIPT"],
-      image: "/projetos/accessible-web.png",
-      isOnWeb: "",
-      liveUrl: "#",
-      isPrivate: false,
-      codeUrl: "https://github.com/VncS1/accessible-web",
-    },
-    {
-      id: 6,
-      title: "Formulário com Testes Automatizados",
-      description:
-        "Desenvolvimento de um formulário para estudos em testes automatizados com Vitest e React Testing Library",
-      tags: ["REACT", "VITEST", "REACT TESTING LIBRARY"],
-      image: "/projetos/vitest.png",
-      isOnWeb: false,
-      liveUrl: "",
-      isPrivate: false,
-      codeUrl: "https://github.com/VncS1/vitest-form",
-    },
-  ];
-
   return (
     <section id="work" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-6 md:px-20">
-        <div className="flex justify-between items-end mb-16">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-2 text-text-main">
-              Projetos
-            </h2>
-            <div className="h-1 w-20 bg-primary rounded-full"></div>
-          </div>
+      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-2 text-text-main">
+            Projetos
+          </h2>
+          <div className="h-1 w-20 bg-primary rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, index) => (
+            <article
               key={project.id}
               className="rounded-xl bg-surface border border-white/5 hover:border-primary/40 transition-all duration-300 group shadow-lg shadow-black/50 flex flex-col overflow-hidden"
             >
               <div className="relative aspect-video w-full overflow-hidden bg-background/50 border-b border-white/5">
-                <div className="absolute inset-0 flex items-center justify-center text-text-muted/20 font-headline font-bold text-xl">
-                  {project.title}
-                </div>
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`Interface do projeto ${project.title}`}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading={index < 3 ? "eager" : "lazy"}
                 />
               </div>
 
               <div className="p-8 flex flex-col flex-1">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 rounded bg-primary/10 border border-primary/30 text-primary text-[10px] font-bold tracking-wider"
+                {/* min-h reserva duas linhas de tags para que os títulos
+                    alinhem entre cards com 3 e com 4 tags. */}
+                <ul className="flex flex-wrap content-start gap-2 mb-6 min-h-[3.75rem]">
+                  {project.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="px-3 py-1 rounded bg-primary/10 border border-primary/30 text-primary text-xs font-bold tracking-wider"
                     >
                       {tag}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
                 <h3 className="text-xl font-headline font-bold mb-3 text-text-main group-hover:text-primary transition-colors">
                   {project.title}
@@ -127,79 +51,86 @@ export function Projects() {
                   {project.description}
                 </p>
 
-                <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
-                  <div className="flex gap-4">
-                    {project.isOnWeb ? (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        className="text-primary hover:scale-110 transition-transform flex items-center gap-2 text-xs font-bold"
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:scale-110 transition-transform flex items-center gap-2 text-xs font-bold rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                          />
-                        </svg>
-                        Ver Website
-                      </a>
-                    ) : (
-                      <></>
-                    )}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                      Ver Website
+                      <span className="sr-only">
+                        do projeto {project.title} (abre em nova aba)
+                      </span>
+                    </a>
+                  )}
 
-                    {project.isPrivate ? (
-                      <div
-                        className="flex items-center gap-2 text-text-muted/40 cursor-not-allowed text-xs font-bold"
-                        title="Este repositório é privado"
+                  {project.codeUrl ? (
+                    <a
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-text-muted hover:text-text-main hover:scale-110 transition-transform flex items-center gap-2 text-xs font-bold rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 00-2 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                          />
-                        </svg>
-                        PRIVADO
-                      </div>
-                    ) : (
-                      <a
-                        href={project.codeUrl}
-                        target="_blank"
-                        className="text-text-muted hover:text-text-main hover:scale-110 transition-transform flex items-center gap-2 text-xs font-bold"
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                        />
+                      </svg>
+                      Código
+                      <span className="sr-only">
+                        do projeto {project.title} no GitHub (abre em nova aba)
+                      </span>
+                    </a>
+                  ) : (
+                    <p className="flex items-center gap-2 text-text-muted text-xs font-bold">
+                      <svg
+                        aria-hidden="true"
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                          />
-                        </svg>
-                        Código
-                      </a>
-                    )}
-                  </div>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                        />
+                      </svg>
+                      PRIVADO
+                      <span className="sr-only">
+                        — o repositório deste projeto não é público
+                      </span>
+                    </p>
+                  )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

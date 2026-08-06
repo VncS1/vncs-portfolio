@@ -4,6 +4,7 @@ export function Tech() {
       category: "Front-end",
       icon: (
         <svg
+          aria-hidden="true"
           className="w-8 h-8 text-primary"
           fill="none"
           stroke="currentColor"
@@ -23,6 +24,7 @@ export function Tech() {
       category: "Back-end",
       icon: (
         <svg
+          aria-hidden="true"
           className="w-8 h-8 text-primary"
           fill="none"
           stroke="currentColor"
@@ -42,6 +44,7 @@ export function Tech() {
       category: "Sistemas",
       icon: (
         <svg
+          aria-hidden="true"
           className="w-8 h-8 text-primary"
           fill="none"
           stroke="currentColor"
@@ -60,8 +63,8 @@ export function Tech() {
   ];
 
   return (
-    <section id="tech" className="py-24 md:px-20 bg-surface">
-      <div className="w-full mx-auto px-6 md:px-8">
+    <section id="tech" className="py-24 bg-surface">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-2 text-text-main">
             Habilidades
@@ -84,16 +87,16 @@ export function Tech() {
                 </h3>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                {arsenal.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-3 py-1.5 rounded bg-primary/10 border border-primary/30 text-primary text-[10px] sm:text-xs font-bold tracking-wider"
+              <ul className="flex flex-wrap gap-2">
+                {arsenal.skills.map((skill) => (
+                  <li
+                    key={skill}
+                    className="px-3 py-1.5 rounded bg-primary/10 border border-primary/30 text-primary text-xs font-bold tracking-wider"
                   >
                     {skill}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>

@@ -1,73 +1,107 @@
-# 🟣 Vinicius Machioni | Full-Stack Architect
-
-![Portfolio Screenshot](/public/screenshot.png)
+# 🟣 Vinicius Machioni | Portfólio
 
 > **"Criando ecossistemas digitais de alta performance onde a estrutura brutalista encontra a precisão high-tech."**
 
-Este é o meu portfólio profissional, desenvolvido para demonstrar minhas competências em engenharia de software, arquitetura de sistemas e design de interfaces modernas. O projeto foi construído do zero, focando em performance extrema, SEO e uma experiência de usuário (UX) imersiva.
+Portfólio profissional construído do zero, com foco em performance, SEO e acessibilidade. Site no ar em **[machioni.dev.br](https://machioni.dev.br)**.
 
 ---
 
-## 🚀 Tecnologias Core
+## 🚀 Stack
 
-O projeto utiliza o que há de mais moderno no ecossistema Web:
-
-- **Next.js 16 (App Router):** Utilizando Server Components para carregamento instantâneo e otimização de LCP.
-- **Tailwind CSS 4.0:** Aproveitando o novo motor de engine CSS focado em variáveis nativas e performance em tempo de compilação.
-- **TypeScript:** Tipagem estrita para garantir a escalabilidade e segurança do código.
-- **CSS Animations:** Animações fluidas e efeitos de digitação (Typewriter) otimizados para não impactar o CLS.
+- **Next.js 16 (App Router)** — a página é inteiramente estática e renderizada no servidor. O único componente cliente do site é o menu mobile, o que mantém o JavaScript enviado ao navegador próximo de zero.
+- **React 19 + React Compiler** — memoização automática, sem `useMemo`/`useCallback` manuais.
+- **Tailwind CSS 4** — design tokens declarados via `@theme` em `src/app/globals.css`.
+- **TypeScript** — modo estrito.
+- **CSS Animations** — efeito typewriter em CSS puro, com respeito a `prefers-reduced-motion`.
 
 ---
 
-## 🛠️ O Arsenal Técnico
+## 📁 Estrutura
 
-O portfólio está dividido em seções estratégicas:
+```
+src/
+├── app/
+│   ├── globals.css      # design tokens (@theme) e animações
+│   ├── layout.tsx       # metadata, OG, viewport, skip link
+│   ├── manifest.ts      # web app manifest
+│   ├── page.tsx         # composição das seções
+│   └── sitemap.ts
+├── components/
+│   ├── Navbar.tsx       # + MobileMenu.tsx (único "use client")
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Tech.tsx
+│   ├── Projects.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+└── data/
+    ├── nav.ts           # links de navegação, contatos, caminho do CV
+    └── projects.ts      # tipo Project + lista de projetos
+```
 
-1. **Hero Section:** Apresentação de alto impacto com animação de digitação em CSS puro.
-2. **Technical Arsenal:** Exibição dinâmica das stacks de Front-end, Back-end e Systems através de mapeamento de dados (D.R.Y).
-3. **Featured Creations:** Vitrine de projetos com lógica de renderização condicional para repositórios privados.
-4. **CTA & Contact:** Canal direto via WhatsApp integrado para conversão imediata de leads.
+Para adicionar ou reordenar projetos, edite apenas `src/data/projects.ts`. O tipo
+`Project` torna os estados inválidos irrepresentáveis: `liveUrl` ausente significa
+que não há versão pública, e `codeUrl` ausente faz o card exibir o selo "PRIVADO".
+
+---
+
+## ♿ Acessibilidade
+
+- Skip link para o conteúdo principal.
+- Landmarks semânticos (`header`, `main`, `nav`, `footer`) com `aria-label`.
+- Menu mobile com `aria-expanded`/`aria-controls`, fechamento por `Esc` e trava de scroll.
+- SVGs decorativos com `aria-hidden`; links externos anunciam que abrem em nova aba.
+- Todo texto passa o contraste mínimo WCAG AA (4.5:1).
+- Indicadores de foco visíveis em todos os elementos interativos.
 
 ---
 
 ## 📐 Design System
 
-A identidade visual foi construída sobre uma paleta **Dark Cyberpunk**, focada em contraste e legibilidade:
+Paleta **Dark Cyberpunk**:
 
-- **Background:** `#09090B` (Neutral Dark)
-- **Primary:** `#8B5CF6` (Vibrant Violet)
-- **Secondary:** `#6D28D9` (Deep Purple)
-- **Typography:** `Space Grotesk` para headlines (Geometria e precisão) e `Inter` para o corpo (Clareza e legibilidade).
+| Token       | Valor     |
+| ----------- | --------- |
+| Background  | `#09090B` |
+| Surface     | `#18181B` |
+| Primary     | `#8B5CF6` |
+| Secondary   | `#6D28D9` |
+| Text main   | `#FFFFFF` |
+| Text muted  | `#A1A1AA` |
+
+Tipografia: `Space Grotesk` nas headlines, `Inter` no corpo.
+
+Todas as seções usam a mesma calha horizontal: `mx-auto max-w-7xl px-6 md:px-12 lg:px-20`.
 
 ---
 
-## 🏁 Como Rodar o Projeto
+## 🏁 Rodando localmente
 
-1. **Instale as dependências:**
+```bash
+npm install
+```
 
-   ```bash
-   npm install
-   ```
+Crie um `.env.local`:
 
-2. **Configure as variáveis de ambiente:**
-   Crie um arquivo `.env.local` e adicione o domínio base:
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
-   ```env
-   NEXT_PUBLIC_SITE_URL=http://localhost:3000
-   ```
+```bash
+npm run dev     # desenvolvimento
+npm run build   # build de produção
+npm run lint    # eslint
+```
 
-3. **Inicie o servidor de desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
+As imagens dos projetos ficam em `public/projetos/` no formato WebP.
 
 ---
 
 ## 📬 Contato
 
-- **LinkedIn:** [linkedin.com/in/seu-usuario](https://linkedin.com/in/viniciusmachioni)
-- **E-mail:** [seu.email.profissional@gmail.com](mailto:machioni.dev@gmail.com)
-- **WhatsApp:** [Conversar Agora](https://wa.me/5535998104311)
+- **LinkedIn:** [linkedin.com/in/viniciusmachioni](https://linkedin.com/in/viniciusmachioni)
+- **E-mail:** [machioni.dev@gmail.com](mailto:machioni.dev@gmail.com)
+- **WhatsApp:** [Conversar agora](https://wa.me/5535998104311)
 
 ---
 
