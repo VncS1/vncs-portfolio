@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "Plataforma SaaS de auditoria que usa inteligência artificial para converter violações de acessibilidade em sugestões de código práticas e acionáveis em tempo real.",
     tags: ["NEXT.JS", "NODE.JS", "TAILWIND", "FULL-STACK"],
     image: "/projetos/ally-ai.webp",
-    liveUrl: "https://ally-ai-web.vercel.app",
+    codeUrl: "https://github.com/VncS1/ally-ai",
   },
   {
     id: 3,
