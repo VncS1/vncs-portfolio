@@ -31,7 +31,7 @@ export function About() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-6 text-text-muted font-body text-base md:text-lg leading-relaxed">
             <p>
-              Sou front-end engineer e há mais de três anos trabalho
+              Sou front-end engineer e desde 2023 trabalho
               profissionalmente construindo interfaces web — com foco em
               performance, acessibilidade e código que outra pessoa consegue
               manter depois de mim.
