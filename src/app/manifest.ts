@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Vinicius Machioni | Desenvolvedor Full-Stack",
+    name: "Vinicius Machioni | Front-End Engineer",
     short_name: "Machioni",
     description:
-      "Portfólio de Vinicius Machioni, desenvolvedor full-stack focado em React, Next.js, Node.js e Laravel.",
+      "Portfólio de Vinicius Machioni, front-end engineer focado em interfaces de alta performance com React, Next.js e TypeScript.",
     start_url: "/",
     display: "standalone",
     background_color: "#09090b",

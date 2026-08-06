@@ -1,6 +1,6 @@
-# 🟣 Vinicius Machioni | Portfólio
+# 🟣 Vinicius Machioni | Front-End Engineer
 
-> **"Criando ecossistemas digitais de alta performance onde a estrutura brutalista encontra a precisão high-tech."**
+> **"Criando interfaces de alta performance onde a estrutura brutalista encontra a precisão high-tech."**
 
 Portfólio profissional construído do zero, com foco em performance, SEO e acessibilidade. Site no ar em **[machioni.dev.br](https://machioni.dev.br)**.
 

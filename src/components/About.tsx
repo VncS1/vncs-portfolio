@@ -1,8 +1,8 @@
 export function About() {
   const highlights = [
     {
-      title: "Full-stack de ponta a ponta",
-      body: "Next.js e React no front, Node.js/Fastify e Laravel no back, PostgreSQL com Prisma na base. Incluindo tempo real via WebSocket.",
+      title: "Front-end com raiz na stack",
+      body: "React, Next.js e TypeScript no dia a dia — e Node.js/Fastify, Laravel, PostgreSQL e tempo real via WebSocket quando a interface precisa que o back-end exista.",
     },
     {
       title: "Produção, não protótipo",
@@ -31,16 +31,17 @@ export function About() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-6 text-text-muted font-body text-base md:text-lg leading-relaxed">
             <p>
-              Sou desenvolvedor full-stack e há mais de um ano trabalho
-              profissionalmente construindo aplicações web completas — do modelo
-              de dados até a interface que o usuário toca.
+              Sou front-end engineer e há mais de um ano trabalho
+              profissionalmente construindo interfaces web — com foco em
+              performance, acessibilidade e código que outra pessoa consegue
+              manter depois de mim.
             </p>
             <p>
-              O que me interessa é o problema inteiro: entender o domínio,
-              modelar os dados, decidir o que vale a pena automatizar e entregar
-              algo que aguente uso real. Por isso meus projetos vão de site
-              institucional de universidade a plataforma SaaS com IA e board
-              colaborativo em tempo real.
+              Não paro na borda do front-end: quando a interface precisa de uma
+              API, de tempo real ou de um modelo de dados que faça sentido, eu
+              construo. É por isso que meus projetos vão de site institucional de
+              universidade a plataforma SaaS com IA e board colaborativo em tempo
+              real.
             </p>
             <p>
               Me preocupo com acessibilidade não como checklist de auditoria, mas

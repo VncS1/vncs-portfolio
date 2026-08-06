@@ -12,7 +12,7 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20 grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
         <div className="order-2 md:order-1">
           <span className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4 block font-bold">
-            Desenvolvedor Full-Stack
+            Front-End Engineer
           </span>
 
           <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-6 leading-tight text-text-main">
@@ -21,8 +21,8 @@ export function Hero() {
           </h1>
 
           <p className="text-text-muted font-body text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
-            Construindo ecossistemas digitais de alta performance: a união entre
-            a estrutura brutalista e a precisão de alta tecnologia.
+            Construindo interfaces de alta performance: a união entre a
+            estrutura brutalista e a precisão de alta tecnologia.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -68,7 +68,7 @@ export function Hero() {
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl border-2 border-white/10 p-1.5 bg-surface/50 backdrop-blur-sm">
               <Image
                 src="/vinicius-machioni.jpg"
-                alt="Vinicius Machioni - Full Stack Developer"
+                alt="Vinicius Machioni, Front-End Engineer"
                 width={320}
                 height={320}
                 className="w-full h-full object-cover rounded-xl"

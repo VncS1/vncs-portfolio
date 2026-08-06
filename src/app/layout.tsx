@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ),
 
-  title: "Vinicius Machioni | Desenvolvedor Full-Stack",
+  title: "Vinicius Machioni | Front-End Engineer",
   description:
-    "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis e interfaces de alta performance utilizando React, Next.js, Node.js e Laravel.",
+    "Front-End Engineer focado em interfaces de alta performance e acessíveis com React, Next.js e TypeScript, com domínio da stack até o banco de dados.",
   keywords: [
-    "Desenvolvedor Full Stack",
+    "Front-End Engineer",
+    "Desenvolvedor Front-End",
     "Engenheiro de Software",
     "React",
     "Next.js",
-    "Laravel",
-    "Node.js",
     "TypeScript",
+    "Acessibilidade",
     "Vinicius Machioni",
   ],
   authors: [{ name: "Vinicius Machioni" }],
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://machioni.dev.br",
-    title: "Vinicius Machioni | Desenvolvedor Full-Stack",
+    title: "Vinicius Machioni | Front-End Engineer",
     description:
-      "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis e interfaces de alta performance utilizando React, Next.js, Node.js e Laravel.",
+      "Front-End Engineer focado em interfaces de alta performance e acessíveis com React, Next.js e TypeScript, com domínio da stack até o banco de dados.",
     siteName: "Vinicius Machioni Portfolio",
 
     images: [
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Vinicius Machioni | Full-Stack Architect",
+    title: "Vinicius Machioni | Front-End Engineer",
     description:
-      "Desenvolvedor Full Stack focado em arquitetar ecossistemas escaláveis.",
+      "Front-End Engineer focado em interfaces de alta performance e acessíveis com React, Next.js e TypeScript.",
     images: ["/og-image.png"],
   },
 };
