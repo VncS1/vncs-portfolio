@@ -21,8 +21,9 @@ export function Hero() {
           </h1>
 
           <p className="text-text-muted font-body text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
-            Construindo interfaces de alta performance: a união entre a
-            estrutura brutalista e a precisão de alta tecnologia.
+            Construo interfaces de alta performance e acessíveis com React,
+            Next.js e TypeScript — e desço até a API, o banco e o deploy quando
+            a funcionalidade exige.
           </p>
 
           <div className="flex flex-wrap gap-4">

@@ -14,7 +14,7 @@ export function Contact() {
           </h2>
 
           <p className="text-text-muted font-body text-lg mb-10 max-w-2xl mx-auto">
-            Disponível para oportunidades full-time e projetos freelance.
+            Disponível para vagas 100% remotas, em CLT, PJ ou como contractor.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">

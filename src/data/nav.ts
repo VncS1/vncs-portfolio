@@ -10,11 +10,11 @@ export const navLinks: NavLink[] = [
   { href: "#contact", label: "Contato" },
 ];
 
-export const CV_PATH = "/CV-Vinicius-Machioni-FrontEnd-Engineer.pdf";
+export const CV_PATH = "/CV-Vinicius-Machioni-PT.pdf";
 
 export const CONTACT = {
   email: "machioni.dev@gmail.com",
   whatsapp: "5535998104311",
-  github: "https://github.com/VncS1",
+  github: "https://github.com/viniciusmachioni",
   linkedin: "https://linkedin.com/in/viniciusmachioni",
 } as const;

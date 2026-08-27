@@ -1,6 +1,6 @@
 # 🟣 Vinicius Machioni | Front-End Engineer
 
-> **"Criando interfaces de alta performance onde a estrutura brutalista encontra a precisão high-tech."**
+> **"Interfaces de alta performance e acessíveis com React, Next.js e TypeScript — e full-stack quando a funcionalidade exige."**
 
 Portfólio profissional construído do zero, com foco em performance, SEO e acessibilidade. Site no ar em **[machioni.dev.br](https://machioni.dev.br)**.
 
@@ -100,6 +100,7 @@ As imagens dos projetos ficam em `public/projetos/` no formato WebP.
 ## 📬 Contato
 
 - **LinkedIn:** [linkedin.com/in/viniciusmachioni](https://linkedin.com/in/viniciusmachioni)
+- **GitHub:** [github.com/viniciusmachioni](https://github.com/viniciusmachioni)
 - **E-mail:** [machioni.dev@gmail.com](mailto:machioni.dev@gmail.com)
 - **WhatsApp:** [Conversar agora](https://wa.me/5535998104311)
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
   title: "Vinicius Machioni | Front-End Engineer",
   description:
-    "Front-End Engineer focado em interfaces de alta performance e acessíveis com React, Next.js e TypeScript, com domínio da stack até o banco de dados.",
+    "Front-End Engineer com React, Next.js e TypeScript desde 2023, focado em acessibilidade WCAG 2.1 e Core Web Vitals — e full-stack quando a funcionalidade exige.",
   keywords: [
     "Front-End Engineer",
     "Desenvolvedor Front-End",
@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     "React",
     "Next.js",
     "TypeScript",
-    "Acessibilidade",
+    "Node.js",
+    "Acessibilidade Web",
+    "WCAG 2.1",
+    "Core Web Vitals",
+    "Desenvolvedor Full-Stack",
     "Vinicius Machioni",
   ],
   authors: [{ name: "Vinicius Machioni" }],
@@ -45,7 +49,7 @@ export const metadata: Metadata = {
     url: "https://machioni.dev.br",
     title: "Vinicius Machioni | Front-End Engineer",
     description:
-      "Front-End Engineer focado em interfaces de alta performance e acessíveis com React, Next.js e TypeScript, com domínio da stack até o banco de dados.",
+      "Front-End Engineer com React, Next.js e TypeScript desde 2023, focado em acessibilidade WCAG 2.1 e Core Web Vitals — e full-stack quando a funcionalidade exige.",
     siteName: "Vinicius Machioni Portfolio",
 
     images: [
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vinicius Machioni | Front-End Engineer",
     description:
-      "Front-End Engineer focado em interfaces de alta performance e acessíveis com React, Next.js e TypeScript.",
+      "Front-End Engineer com React, Next.js e TypeScript, focado em acessibilidade WCAG 2.1 e performance com Core Web Vitals.",
     images: ["/og-image.png"],
   },
 };

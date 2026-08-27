@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Vinicius Machioni | Front-End Engineer",
     short_name: "Machioni",
     description:
-      "Portfólio de Vinicius Machioni, front-end engineer focado em interfaces de alta performance com React, Next.js e TypeScript.",
+      "Portfólio de Vinicius Machioni, front-end engineer com React, Next.js e TypeScript, focado em acessibilidade WCAG 2.1 e performance.",
     start_url: "/",
     display: "standalone",
     background_color: "#09090b",
