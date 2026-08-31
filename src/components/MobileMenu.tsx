@@ -2,10 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { navLinks } from "@/data/nav";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const { lang } = useLanguage();
+  const t = translations[lang];
 
   useEffect(() => {
     if (!open) return;
@@ -30,7 +34,7 @@ export function MobileMenu() {
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-controls="mobile-menu"
-        aria-label={open ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+        aria-label={open ? t.mobileMenu.closeLabel : t.mobileMenu.openLabel}
         className="flex items-center justify-center w-11 h-11 -mr-2 rounded-md text-text-muted hover:text-text-main transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         <svg
@@ -69,21 +73,25 @@ export function MobileMenu() {
         hidden={!open}
         className="absolute top-full inset-x-0 h-[calc(100dvh-5rem)] overflow-y-auto bg-background border-t border-white/5"
       >
-        <nav aria-label="Navegação principal" className="px-6 py-8">
-          <ul className="flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-4 text-lg font-body font-medium text-text-muted hover:text-primary transition-colors border-b border-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="px-6 py-8">
+          <LanguageToggle className="mb-6" />
+
+          <nav aria-label={t.mobileMenu.navAriaLabel}>
+            <ul className="flex flex-col gap-2">
+              {t.nav.links.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="block py-4 text-lg font-body font-medium text-text-muted hover:text-primary transition-colors border-b border-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   );

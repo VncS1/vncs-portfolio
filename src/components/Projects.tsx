@@ -1,13 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import { projects } from "@/data/projects";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 export function Projects() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   return (
     <section id="work" className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter mb-2 text-text-main">
-            Projetos
+            {t.projects.heading}
           </h2>
           <div className="h-1 w-20 bg-primary rounded-full"></div>
         </div>
@@ -21,7 +28,7 @@ export function Projects() {
               <div className="relative aspect-video w-full overflow-hidden bg-background/50 border-b border-white/5">
                 <Image
                   src={project.image}
-                  alt={`Interface do projeto ${project.title}`}
+                  alt={t.projects.imageAlt(project.title)}
                   fill
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -48,7 +55,7 @@ export function Projects() {
                 </h3>
 
                 <p className="text-text-muted font-body text-sm leading-relaxed mb-8 flex-1">
-                  {project.description}
+                  {project.description[lang]}
                 </p>
 
                 <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
@@ -73,9 +80,9 @@ export function Projects() {
                           d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                         />
                       </svg>
-                      Ver Website
+                      {t.projects.viewWebsite}
                       <span className="sr-only">
-                        do projeto {project.title} (abre em nova aba)
+                        {t.projects.viewWebsiteSrSuffix(project.title)}
                       </span>
                     </a>
                   )}
@@ -101,9 +108,9 @@ export function Projects() {
                           d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                         />
                       </svg>
-                      Código
+                      {t.projects.code}
                       <span className="sr-only">
-                        do projeto {project.title} no GitHub (abre em nova aba)
+                        {t.projects.codeSrSuffix(project.title)}
                       </span>
                     </a>
                   ) : (
@@ -122,9 +129,9 @@ export function Projects() {
                           d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
                         />
                       </svg>
-                      PRIVADO
+                      {t.projects.private}
                       <span className="sr-only">
-                        — o repositório deste projeto não é público
+                        {t.projects.privateSrSuffix}
                       </span>
                     </p>
                   )}

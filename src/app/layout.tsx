@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { LanguageProvider } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
+import { SkipLink } from "@/components/SkipLink";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -14,28 +17,25 @@ const inter = Inter({
   display: "swap",
 });
 
+// Metadados estáticos, em português (idioma padrão do site): quem compartilha
+// o link — WhatsApp, Twitter, um crawler na primeira visita — nunca carrega
+// o localStorage/cookie do visitante, então não há "idioma certo" para servir
+// dinamicamente aqui; qualquer estratégia por-request atenderia só a aba do
+// próprio visitante recorrente, ao custo de tirar a rota da geração estática.
+// Ver [[cv-en-metadata-static]] para o porquê dessa escolha.
+const seoPt = translations.pt.seo;
+const keywords = Array.from(
+  new Set([...seoPt.keywords, ...translations.en.seo.keywords]),
+);
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ),
 
-  title: "Vinicius Machioni | Front-End Engineer",
-  description:
-    "Front-End Engineer com React, Next.js e TypeScript desde 2023, focado em acessibilidade WCAG 2.1 e Core Web Vitals — e full-stack quando a funcionalidade exige.",
-  keywords: [
-    "Front-End Engineer",
-    "Desenvolvedor Front-End",
-    "Engenheiro de Software",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "Acessibilidade Web",
-    "WCAG 2.1",
-    "Core Web Vitals",
-    "Desenvolvedor Full-Stack",
-    "Vinicius Machioni",
-  ],
+  title: seoPt.title,
+  description: seoPt.description,
+  keywords,
   authors: [{ name: "Vinicius Machioni" }],
   creator: "Vinicius Machioni",
 
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
+    alternateLocale: "en_US",
     url: "https://machioni.dev.br",
-    title: "Vinicius Machioni | Front-End Engineer",
-    description:
-      "Front-End Engineer com React, Next.js e TypeScript desde 2023, focado em acessibilidade WCAG 2.1 e Core Web Vitals — e full-stack quando a funcionalidade exige.",
+    title: seoPt.title,
+    description: seoPt.description,
     siteName: "Vinicius Machioni Portfolio",
 
     images: [
@@ -64,9 +64,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Vinicius Machioni | Front-End Engineer",
-    description:
-      "Front-End Engineer com React, Next.js e TypeScript, focado em acessibilidade WCAG 2.1 e performance com Core Web Vitals.",
+    title: seoPt.title,
+    description: seoPt.twitterDescription,
     images: ["/og-image.png"],
   },
 };
@@ -87,13 +86,10 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-text-main font-body">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:font-bold focus:text-text-main"
-        >
-          Pular para o conteúdo
-        </a>
-        {children}
+        <LanguageProvider>
+          <SkipLink />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

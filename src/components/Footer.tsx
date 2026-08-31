@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT } from "@/data/nav";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 export function Footer() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
   const currentYear = new Date().getFullYear();
 
   const socials = [
@@ -16,7 +22,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-6">
         <Link
           href="/"
-          aria-label="Vinicius Machioni — ir para o início"
+          aria-label={t.footer.logoAriaLabel}
           className="flex items-center hover:opacity-80 transition-opacity rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
         >
           <Image
@@ -29,7 +35,7 @@ export function Footer() {
           />
         </Link>
 
-        <nav aria-label="Redes e contato">
+        <nav aria-label={t.footer.navAriaLabel}>
           <ul className="flex items-center gap-6 text-sm font-body font-medium text-text-muted">
             {socials.map((social) => (
               <li key={social.label}>

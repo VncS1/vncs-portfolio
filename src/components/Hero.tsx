@@ -1,7 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import { CV_PATH } from "@/data/nav";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 
 export function Hero() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-32 lg:pt-20 lg:pb-0">
       <div
@@ -12,7 +18,7 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20 grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
         <div className="order-2 md:order-1">
           <span className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4 block font-bold">
-            Front-End Engineer
+            {t.hero.eyebrow}
           </span>
 
           <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-6 leading-tight text-text-main">
@@ -21,14 +27,12 @@ export function Hero() {
           </h1>
 
           <p className="text-text-muted font-body text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
-            Construo interfaces de alta performance e acessíveis com React,
-            Next.js e TypeScript — e desço até a API, o banco e o deploy quando
-            a funcionalidade exige.
+            {t.hero.intro}
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a
-              href={CV_PATH}
+              href={t.cvPath}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-text-main px-8 py-4 font-body font-bold rounded-lg shadow-[0_0_32px_rgba(139,92,246,0.2)] hover:scale-105 transition-transform flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -47,14 +51,14 @@ export function Hero() {
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                 />
               </svg>
-              Download CV
-              <span className="sr-only"> em PDF (abre em nova aba)</span>
+              {t.hero.cvLabel}
+              <span className="sr-only">{t.hero.cvSrSuffix}</span>
             </a>
             <a
               href="#work"
               className="bg-surface text-text-muted px-8 py-4 font-body font-bold rounded-lg border border-white/10 hover:bg-white/5 hover:text-text-main transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              Ver Projetos
+              {t.hero.viewProjects}
             </a>
           </div>
         </div>
